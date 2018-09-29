@@ -5,13 +5,11 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('../config/config.js')
 
-
 //connect to mongo
 //console.log(config.dbSettings.uri);
 mongoose.connect(config.dbSettings.uri, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-
 
 server.use(morgan('dev'));
 server.use(bodyParser.urlencoded({extended: false}));
