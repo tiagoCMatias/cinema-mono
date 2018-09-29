@@ -42,6 +42,7 @@ server.use( (req, res, next) => {
     next(error);
 });
 
+
 server.use( (error, req, res, next) => {
     res.status(error.status || 500);
     console.log(error);
