@@ -1,0 +1,26 @@
+{
+  "name": "cinema-mono",
+  "version": "1.0.0",
+  "description": "Monolithic system with NodeJS & MongoDB and deploy it to Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagoCMatias/cinema-mono.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagoCMatias/cinema-mono/issues"
+  },
+  "homepage": "https://github.com/tiagoCMatias/cinema-mono#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "mongoose": "^5.2.18",
+    "morgan": "^1.9.1"
+  }
+}
