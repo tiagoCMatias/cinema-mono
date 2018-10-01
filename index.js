@@ -7,7 +7,7 @@ const app = http.createServer(server);
 app.listen(config.serverSettings.port, () => {
     console.log('Server started on port ' + config.serverSettings.port);
 });
-
+ 
 exports.listen = function () {
     this.app.listen.apply(this.app, arguments);
 };

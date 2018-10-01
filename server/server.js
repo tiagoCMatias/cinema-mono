@@ -7,9 +7,9 @@ const config = require('../config/config.js')
 
 //connect to mongo
 //console.log(config.dbSettings.uri);
-mongoose.connect(config.dbSettings.uri, { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+mongoose.connect('mongodb://mongo:27017');
+//const db = mongoose.connection;
+//db.on('error', console.error.bind(console, 'connection error:'));
 
 server.use(morgan('dev'));
 server.use(bodyParser.urlencoded({extended: false}));
@@ -33,7 +33,11 @@ server.use(function (req, res, next) {
     next();
 });
 
+/** Add Routes */
+const init_route = require('../routes/init_route.js');
+
 /** Handling routes */
+server.use('/init', init_route);
 
 /** Error Handling */
 server.use( (req, res, next) => {

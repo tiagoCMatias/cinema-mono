@@ -1,5 +1,5 @@
 const dbSettings = {
-  uri: process.env.URI || 'mongodb://mongo:27017/movies', 
+  uri: process.env.URI || 'mongodb://mongo:27017/movies/', 
 }
   
 const serverOptions = {
@@ -16,7 +16,7 @@ const serverOptions = {
 }
 
 const serverSettings = {
-  port: process.env.PORT || 3001,
+  port: process.env.PORT || 3000,
   //ssl: require('./ssl')
 }
 
