@@ -35,9 +35,11 @@ server.use(function (req, res, next) {
 
 /** Add Routes */
 const init_route = require('../routes/init_route.js');
+const movies_route = require('../routes/movie');
 
 /** Handling routes */
 server.use('/init', init_route);
+server.use('/movie', movies_route);
 
 /** Error Handling */
 server.use( (req, res, next) => {
